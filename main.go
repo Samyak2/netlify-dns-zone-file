@@ -118,12 +118,18 @@ func GenerateZoneFile(zone DnsZone, records []DnsRecord) (string, error) {
 			value = record.Value
 		}
 
+		var priority = ""
+		if record.Priority != 0 {
+			priority = fmt.Sprintf("\t%d", record.Priority)
+		}
+
 		zoneFile.WriteString(
 			fmt.Sprintf(
-				"%s\tIN\t%d\t%s\t%s\n",
+				"%s\tIN\t%d\t%s%s\t%s\n",
 				name,
 				record.Ttl,
 				record.Type,
+				priority,
 				value,
 			),
 		)
@@ -152,7 +158,7 @@ func main() {
 			log.Fatalln(err)
 		}
 
-		fileName := zone.Id+".zone"
+		fileName := zone.Id + ".zone"
 
 		err = os.WriteFile(fileName, []byte(zoneContents), 0644)
 		if err != nil {
