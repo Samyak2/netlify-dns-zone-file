@@ -14,11 +14,12 @@ Now, you can either [Run on Replit](https://replit.com/@samyaks/netlify-dns-zone
 
 ### Run on Replit
 
+1. Open [the Repl](https://replit.com/@samyaks/netlify-dns-zone-file) and click on the play button to run it once.
 1. Export the netlify token as an environment variable:
     ```bash
     export NETLIFY_TOKEN=<your token here>
     ```
-1. Run the tool. The output will contain the names of the `.zone` files that were generated.
+1. Run the tool again. The output will contain the names of the `.zone` files that were generated.
     ```bash
     ./main
     ```
