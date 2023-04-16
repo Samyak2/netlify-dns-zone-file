@@ -1,5 +1,28 @@
 # Netlify DNS Zone File Generator
 
+Generate a zone file from your Netlify DNS records.
+
+**Intended use case**: to transfer DNS records from Netlify to Cloudflare (which supports importing a zone file).
+
+**How does it work**: Netlify does not provide an option to export records to a zone file, but it does provide an [API](https://open-api.netlify.com/#tag/dnsZone/operation/getDnsRecords) that lists them. This tool uses the data from this API and creates a zone file out of it.
+
+## Usage
+
+1. Create a [Netlify Personal Access Token](https://app.netlify.com/user/applications#personal-access-tokens).
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/Samyak2/netlify-dns-zone-file.git
+    ```
+1. Export the netlify token as an environment variable:
+    ```bash
+    export NETLIFY_TOKEN=<your token here>
+    ```
+1. Run the tool:
+    ```bash
+    go run .
+    ```
+
+
 ## License
 
 MIT
