@@ -18,7 +18,10 @@ Now, you can either [Run on Replit](https://replit.com/@samyaks/netlify-dns-zone
     ```bash
     export NETLIFY_TOKEN=<your token here>
     ```
-1. Click on "Run". The output will contain the names of the `.zone` files that were generated.
+1. Run the tool. The output will contain the names of the `.zone` files that were generated.
+    ```bash
+    ./main
+    ```
 
 ### Run locally
 
