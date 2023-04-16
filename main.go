@@ -105,6 +105,7 @@ func GenerateZoneFile(zone DnsZone, records []DnsRecord) (string, error) {
 
 	for _, record := range records {
 		if record.Type == "NETLIFY" {
+			fmt.Printf("ingoring NETLIFY record: %s\n", record.Hostname)
 			continue
 		}
 
