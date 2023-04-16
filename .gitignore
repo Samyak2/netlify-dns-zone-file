@@ -1,2 +1,5 @@
 # generated zone files
 *.zone
+
+# binary
+main

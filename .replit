@@ -1,0 +1,20 @@
+run = ["./main"]
+
+entrypoint = "main.go"
+hidden = ["main"]
+compile = ["go", "build", "-o", "main", "."]
+
+[languages.go]
+pattern = "**/*.go"
+
+[languages.go.languageServer]
+start = "gopls"
+
+[nix]
+channel = "stable-22_11"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["sh", "-c", "go run ."]
