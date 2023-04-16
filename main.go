@@ -141,6 +141,10 @@ func GenerateZoneFile(zone DnsZone, records []DnsRecord) (string, error) {
 func main() {
 	token := os.Getenv("NETLIFY_TOKEN")
 
+	if token == "" {
+		log.Fatalln("NETLIFY_TOKEN was not set.")
+	}
+
 	client := NewNetlifyDnsClient(token)
 
 	zones, err := client.GetAllDnsZones()
