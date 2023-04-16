@@ -39,6 +39,13 @@ Now, you can either [Run on Replit](https://replit.com/@samyaks/netlify-dns-zone
     go run .
     ```
 
+## Troubleshooting
+
+The tool has only been tested with one domain - when transferring it from Netlify to Cloudflare.
+The record types that it has been confirmed to handle include A, CNAME, NETLIFY (ignored), MX and TXT.
+
+If you notice errors when importing the generated zone file, please open [an issue](https://github.com/Samyak2/netlify-dns-zone-file/issues/new) to report them.
+
 
 ## License
 
