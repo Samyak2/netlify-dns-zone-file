@@ -46,6 +46,9 @@ The record types that it has been confirmed to handle include A, CNAME, NETLIFY 
 
 If you notice errors when importing the generated zone file, please open [an issue](https://github.com/Samyak2/netlify-dns-zone-file/issues/new) to report them.
 
+## Misc
+
+- [Blog post on migrating DNS from Netlify to Cloudflare](https://samyaks.xyz/post/netlify-cloudflare/)
 
 ## License
 
